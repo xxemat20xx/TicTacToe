@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <!-- Start the game container -->
+    <div class="start-game-container">
+        <div class="start-game-img">
+            <img src="./assets/img/raze-valo.png" alt="..." class="player1img">
+        </div>
+        <div class="start-game-img">
+            <img src="./assets/img/KJ-valo.png" alt="..." class="player2img">
+        </div>
+        <div class="start-game-text">
+            <span><strong>Valorant</strong></span>
+            <h1 id="title">Tic Tac Toe</h1>
+            <button id="start-gameBtn" class="btn">Start Game</button>
+        </div>
+    </div>
+    <!-- Enter player name container -->
+    <div class="popup-form-container remove-el">
+        <form id="form" action="">
+            <div class="form-players">
+                <div class="player1">
+                    <img src="./assets/img/KJ.png" alt="player1.jpg">
+                    <div class="form-input">
+                        <input type="text" class="input-form" name="playerX" placeholder="PLAYER 1 NAME" id="player1"
+                            required>
+                    </div>
+                </div>
+                <div class="form-text">
+                    <h3>Please enter your name</h3>
+                    <button id="enter-nameBtn" class="btn" type="submit">Start Game</button>
+                </div>
+                <div class="player2">
+                    <img src="./assets/img/RAZE.png" alt="player2.jpg">
+                    <div class="form-input">
+                        <input type="text" class="input-form" name="playerO" id="player2" placeholder="PLAYER TWO NAME"
+                            required>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Cell Container -->
+    <div class="game-container remove-el" id="game-container">
+        <h1>Tic Tac Toe</h1>
+        <span id="message"></span>
+        <div class="container">
+            <div class="player1-container">
+                <img src="./assets/img/KJ-valo.png" alt="" class="player1img">
+            </div>
+            <div class="cell-container">
+                <!-- to append -->
+            </div>
+            <div class="player2-container">
+                <img src="./assets/img/raze-valo.png" alt="" class="player1img">
+            </div>
+        </div>
+        <div class="button-container">
+            <div class="player-text">
+                <h4 id="player1-displayName"></h4>
+                <span id="p1-score"></span>
+            </div>
+            <button class="btn" id="reset-gameBtn">Reset</button>
+            <button class="btn" id="restartGame">Restart</button>
+            <div class="player-text">
+                <h4 id="player2-displayName">Player 2</h4>
+                <span id="p2-score"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

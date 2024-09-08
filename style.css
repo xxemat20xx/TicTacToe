@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 100dvh;
+    background-color: #FF204E;
+}
+
+.start-game-container {
+    font-family: 'Valorant';
+    src: URL('/assets/fonts/ValorantFont.ttf') format('truetype');
+    background-color: #FF204E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100dvw;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+
+}
+
+.start-game-img {
+    height: 100%;
+}
+
+.player1img,
+.player2img {
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+    background-color: transparent;
+    position: relative;
+    animation: animate 2s alternate infinite;
+
+}
+
+.start-game-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+
+}
+
+.start-game-text span {
+    font-size: 8em;
+    text-shadow: 4px 5px 5px rgba(0, 0, 0, 0.58);
+}
+
+.btn {
+    border: none;
+    padding: 18px;
+    width: 12em;
+    border-radius: 50px;
+    margin: 25px 0;
+    font-size: 1em;
+    background-color: #FF8F00;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Valorant';
+    src: URL('/assets/fonts/ValorantFont.ttf') format('truetype');
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e38100;
+    transition: 0.3s ease-in-out;
+}
+
+/* POP UP FORM */
+
+.popup-form-container {
+    /* background-color: #A0153E; */
+    background-position: center;
+    background-size: cover;
+    background-image: url(./assets/img/bg2.png);
+    height: 100dvh;
+    width: 100%;
+    box-shadow: inset 0 0 0 2000px rgba(12, 12, 12, 0.336);
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 55em;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 25px;
+    box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+}
+
+.form-text {
+    text-align: center;
+    color: #333;
+
+}
+
+.form-text h3 {
+    font-size: 2em;
+    color: #d31238;
+    /* text-shadow: 2px 5px 2px #FF204E; */
+}
+
+.form-players {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.player1,
+.player2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player1 img,
+.player2 img {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 250px;
+    margin: 2em 0;
+    box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+}
+
+.form-input input {
+    /* width: 300px; */
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.2em;
+    text-align: center;
+    outline: none;
+}
+
+/* GAME CELL CONTAINER */
+.container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    background-color: #FF204E;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    min-height: 666px;
+}
+
+.game-container #message {
+    font-size: 2em;
+    background-color: #fff;
+    color: #333;
+    padding: 0 1em;
+    border-radius: 15px;
+}
+
+.game-container .player1img,
+.game-container .player2img {
+    height: 100%;
+    width: 100%;
+    height: 500px;
+    max-width: 900px;
+}
+
+#reset-gameBtn,
+#restartGame {
+    width: 9em;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+#reset-gameBtn:hover,
+#restartGame:hover {
+    background-color: #dbdbdb;
+}
+
+.cell-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    /* width: 37em; */
+
+    /* background-color: #fff; */
+    border-radius: 25px;
+
+}
+
+.cell {
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 110px;
+    font-size: 4em;
+    cursor: pointer;
+    text-align: center;
+    border: 10px solid #fff;
+    border-radius: 25px;
+    margin: 10px;
+    color: #fff;
+    box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 13px 19px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cell:hover {
+    width: 1.85em;
+    height: 1.85em;
+    transition: 0.7s ease-in-out;
+}
+
+.cell:nth-child(even) {
+    border-color: #f653e6;
+
+}
+
+.cell:nth-child(odd) {
+    border-color: #fea221;
+}
+
+.button-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.remove-el {
+    display: none;
+}
+
+/* animate */
+@keyframes animate {
+    from {
+        bottom: 0;
+
+    }
+
+    to {
+        bottom: 15px;
+    }
+}
+
+/* media query */
+@media (max-width:844px) {
+
+    .start-game-text {
+
+        font-size: 10px;
+    }
+
+    .start-game-img {
+        height: 70%;
+        font-size: 8px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .form-players {
+        width: 100%;
+    }
+
+    .player1,
+    .player2 {
+        width: 100%;
+    }
+
+    .player1 img,
+    .player2 img {
+        width: 50%
+    }
+
+
+    .form-players {
+        flex-direction: column;
+        background-color: #FF204E;
+        padding: 2em 0;
+    }
+
+    .player1 img,
+    .player2 img {
+        width: 150px;
+    }
+
+    .form-text h3 {
+        color: #fff;
+    }
+
+    .form-input input {
+        border: 1px solid #333;
+    }
+
+    .player1img,
+    .player2img {
+        display: none;
+    }
+
+    .button-container {
+        font-size: 1em;
+    }
+
+    #reset-gameBtn,
+    #restartGame {
+        font-size: 10px;
+        font-weight: 800;
+    }
+}
+
+@media (max-width:500px) {
+    #start-gameBtn {
+        font-size: 1.5em;
+    }
+
+    .start-game-text {
+        font-size: 6px;
+    }
+}
+
+@media (max-width:430px) {
+    .start-game-text {
+
+        font-size: 7px;
+    }
+
+    #start-gameBtn {
+        font-size: 2em;
+    }
+
+    .cell {
+        width: 1.5em;
+        height: 1.5em
+    }
+
+    .cell:hover {
+        width: 1.6em;
+        height: 1.6em
+    }
+
+}
